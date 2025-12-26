@@ -1,16 +1,21 @@
 import './index.css'
+import Home from './components/ui/Home'
+import Contact from './components/ui/Contact'
+import { Routes, Route } from 'react-router-dom'
+import { Navbar } from './components/NavigationBar'
 
 function App() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-4xl font-italic mb-4">Alex Reiffer</h1>
-        <p className="blurb max-w-lg">
-          I am Alex Reiffer, a student in Computer Science at Grand Valley State University. 
-          In my free time I enjoy either gaming or playing one of my many instruments. 
-          I also enjoy being physically active and will go on long bike rides. 
-        </p>
-      </div>
+    <Navbar />
+    <main className="flex-1 flex flex-col items-center container mx-auto p-4">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/projects" element={<div>Projects Page</div>} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </main>
     </>
   )
 }
