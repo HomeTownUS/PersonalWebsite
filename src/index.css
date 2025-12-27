@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 @import "tw-animate-css";
 @import "tailwindcss";
 
@@ -51,6 +52,9 @@
   /* Brand colors migrated from the old index.css */
   --color-vibe-purple: #646cff;
   --color-vibe-purple-hover: #535bf2;
+
+  /* Custom fonts*/
+  --font-jersy-10: "Jersey 10", sans-serif;
 }
 
 :root {
