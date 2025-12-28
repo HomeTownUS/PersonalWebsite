@@ -21,7 +21,7 @@ export function Form({ userEmail }: FormProps) {
       return;
     }
     try {
-      await setDoc(doc(collection(db, "Contacts","Messages",userEmail)), {name: name, email: contactEmail, message: message, timestamp: new Date()});
+      await setDoc(doc(collection(db, "Messages")), {name: name, userEmail: userEmail, contactEmail: contactEmail, message: message, timestamp: new Date()});
       // Clear form fields after submission confirmation
       console.log("Document written successfully");
       setName("");
